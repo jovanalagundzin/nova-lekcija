@@ -1,5 +1,5 @@
 //callback funct
-let da = function () {
+/*let da = function () {
   console.log("uspeo si");
 };
 let ne = function () {
@@ -69,4 +69,79 @@ let cekaj = (resolve, reject) => {
   }, 3000);
 };
 let addItempromise = new Promise(cekaj);
-addItempromise.then(addListItem).catch((err) => console.log(err));
+addItempromise.then(addListItem).catch((err) => console.log(err));*/
+
+//fetch
+/*let addNewElement = function (info) {
+  let newDiv = document.createElement(`div`);
+  let img = document.createElement(`img`);
+  let name = document.createElement(`p`);
+  let nameNode = document.createTextNode(info.name);
+  let emailNode = document.createTextNode(info.email);
+  name.appendChild(nameNode);
+  email.appendChild(emailnode);
+  newDiv.appendChild(name);
+  newDiv.appendChild(email);
+  document.body.appendChild(newDiv);
+};
+
+fetch("users.json")
+  .then((response) => response.json())
+  .then((user) => {
+    let info = "";
+    for (let users of users) {
+      info += "<p>name:" + user.name + "</p>";
+      info += "<p>email:" + user.email + "</p>";
+      info += `<img.src=petar.jpg" heigh="200">`;
+      document.body.innerHTML = info;
+    }
+  });
+
+fetch("users.json")
+  .then((response) => response.json())
+  .then((user) => {
+    let info = "";
+    for (let users of users) {
+      info += "<p>name:" + user.name + "</p>";
+      info += "<p>email:" + user.email + "</p>";
+      info += `<img.src=milan.jpg" heigh="200">`;
+    }
+    document.body.innerHTML = info;
+  });*/
+
+let createProfile = function (user) {
+  let newDiv = document.createElement(`div`);
+  let profilePic = document.createElement(`img`);
+  let ul = document.createElement(`ul`);
+  let nameLi = document.createElement(`li`);
+  let emailLi = document.createElement(`li`);
+
+  let nameTxt = document.createTextNode(user.name);
+  let emailTxt = document.createTextNode(user.email);
+
+  profilePic.src = user.profilePicture;
+
+  nameLi.appendChild(nameTxt);
+  emailLi.appendChild(emailTxt);
+
+  ul.appendChild(nameLi);
+  ul.appendChild(emailLi);
+
+  newDiv.appendChild(profilePic);
+  newDiv.appendChild(ul);
+
+  newDiv.classList.toggle(`user`);
+
+  let content = document.getElementById(`content`);
+
+  content.appendChild(newDiv);
+};
+
+let createElementsFromJson = function (users) {
+  for (let user of users) {
+    createProfile(user);
+  }
+};
+fetch("users.json")
+  .then((response) => response.json())
+  .then((data) => createElementsFromJson(data));

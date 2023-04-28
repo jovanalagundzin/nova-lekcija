@@ -1,0 +1,44 @@
+
+[
+    {
+    "name": "petar",
+    "email": "petar@gmail.com",
+    "password": "12345",
+    "profilePicture": "petar.jpg"
+}
+,
+{
+    "name": "milan",
+    "email": "milan@gmail.com",
+    "password": "55789",
+    "profilePicture": "milan.jpg"
+}
+,
+{
+    "name": "ana",
+    "email": "ana@gmail.com",
+    "password": "55789",
+    "profilePicture": "ana.jpg"
+}
+,
+{
+    "name": "nataša",
+    "email": "nataša@gmail.com",
+    "password": "55789",
+    "profilePicture": "nataša.jpg"
+}
+,
+{
+    "name": "jana",
+    "email": "jana@gmail.com",
+    "password": "55789",
+    "profilePicture": "jana.jpg"
+}
+,
+{
+    "name": "uroš",
+    "email": "uroš@gmail.com",
+    "password": "55789",
+    "profilePicture": "uroš.jpg"
+}
+]
